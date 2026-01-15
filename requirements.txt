@@ -20,7 +20,7 @@ django-csp==3.8
 django-imagekit==5.0.0
 
 # Rich text editor
-django-ckeditor==6.7.1
+django-summernote==0.8.20.0
 
 # Tagging
 django-taggit==5.0.1

@@ -38,8 +38,12 @@ DATABASES = {
 # For development, we can allow all origins for easier testing
 CORS_ALLOW_ALL_ORIGINS = True
 
-# Email backend for development
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# Email backend for development (using Maildev)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = False
 
 # Static files (CSS, JavaScript, Images)
 # In development, static files are served by Django

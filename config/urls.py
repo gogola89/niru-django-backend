@@ -23,6 +23,9 @@ urlpatterns = [
     # Admin
     path('admin/', admin.site.urls),
 
+    # Django Summernote
+    path('summernote/', include('django_summernote.urls')),
+
     # API Routes
     path('api/v1/', include('core.api_urls')),
 ]

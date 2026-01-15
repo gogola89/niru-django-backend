@@ -11,6 +11,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Application definition
 INSTALLED_APPS = [
+    'jazzmin',  # Must come before django.contrib.admin for proper theming
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -21,8 +23,7 @@ INSTALLED_APPS = [
     # Third-party apps
     'rest_framework',
     'corsheaders',
-    'jazzmin',
-    'ckeditor',  # Rich text editor
+    'django_summernote',  # Rich text editor (replacing ckeditor)
     'imagekit',  # Image processing
     'drf_spectacular',  # API documentation
 
