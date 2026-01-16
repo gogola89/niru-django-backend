@@ -40,7 +40,7 @@ class CoreValueAdmin(admin.ModelAdmin):
             'fields': ('title', 'description')
         }),
         ('Visual Elements', {
-            'fields': ('icon', 'icon_thumbnail'),
+            'fields': ('icon',),
             'classes': ('collapse',)
         }),
         ('Timestamps', {

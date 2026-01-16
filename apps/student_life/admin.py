@@ -13,7 +13,7 @@ class ServiceAdmin(admin.ModelAdmin):
             'fields': ('name', 'description', 'order')
         }),
         ('Visual Elements', {
-            'fields': ('image', 'image_thumbnail'),
+            'fields': ('image',),
         }),
         ('Timestamps', {
             'fields': ('created_at', 'updated_at'),
@@ -34,7 +34,7 @@ class FacilityAdmin(admin.ModelAdmin):
             'fields': ('name', 'description', 'category')
         }),
         ('Visual Elements', {
-            'fields': ('image', 'image_thumbnail'),
+            'fields': ('image',),
         }),
         ('Timestamps', {
             'fields': ('created_at', 'updated_at'),
@@ -63,7 +63,7 @@ class RecreationFacilityAdmin(admin.ModelAdmin):
             'classes': ('collapse',)
         }),
         ('Visual Elements', {
-            'fields': ('image', 'image_thumbnail'),
+            'fields': ('image',),
         }),
         ('Timestamps', {
             'fields': ('created_at', 'updated_at'),

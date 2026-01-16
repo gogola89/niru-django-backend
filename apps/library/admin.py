@@ -71,7 +71,7 @@ class EResourceAdmin(admin.ModelAdmin):
             'fields': ('name', 'description', 'url', 'category')
         }),
         ('Visual Elements', {
-            'fields': ('icon', 'icon_thumbnail'),
+            'fields': ('icon',),
             'classes': ('collapse',)
         }),
         ('Timestamps', {

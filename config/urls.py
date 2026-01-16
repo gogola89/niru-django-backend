@@ -26,8 +26,18 @@ urlpatterns = [
     # Django Summernote
     path('summernote/', include('django_summernote.urls')),
 
-    # API Routes
-    path('api/v1/', include('core.api_urls')),
+    # API Routes - combining core and app-specific APIs
+    path('api/v1/', include([
+        # Core API routes
+        path('', include('core.api_urls')),
+
+        # App-specific API routes
+        path('about/', include('api.v1.about.urls')),
+        path('governance/', include('api.v1.governance.urls')),
+        path('academics/', include('api.v1.academics.urls')),
+        path('library/', include('api.v1.library.urls')),
+        path('student-life/', include('api.v1.student_life.urls')),
+    ])),
 ]
 
 # Serve media files during development

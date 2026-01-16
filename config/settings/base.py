@@ -29,6 +29,11 @@ INSTALLED_APPS = [
 
     # Local apps
     'core',
+    'apps.about',
+    'apps.governance',
+    'apps.academics',
+    'apps.library',
+    'apps.student_life',
 ]
 
 MIDDLEWARE = [

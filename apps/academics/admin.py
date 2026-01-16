@@ -51,7 +51,7 @@ class ProgrammeHighlightAdmin(admin.ModelAdmin):
             'fields': ('programme', 'title', 'description')
         }),
         ('Visual Elements', {
-            'fields': ('icon', 'icon_thumbnail'),
+            'fields': ('icon',),
             'classes': ('collapse',)
         }),
         ('Timestamps', {
