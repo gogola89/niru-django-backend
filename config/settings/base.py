@@ -180,80 +180,75 @@ REST_FRAMEWORK['ALLOWED_VERSIONS'] = ['v1', 'v2']
 JAZZMIN_SETTINGS = {
     # title of the window
     "site_title": "NIRU Admin",
-    
+
     # Title on the login screen of the brand
     "site_header": "NIRU Administration",
-    
+
     # square logo to use for your site, must be present in static files, used for favicon and brand on top left
     "site_logo": "images/niru-logo.png",
-    
+
     # Welcome text on the login screen
-    "welcome_sign": "Welcome to the National Intelligence and Research University Admin Panel",
-    
+    "welcome_sign": "NIRU Administration",
+
     # Copyright on the footer
     "copyright": "NIRU",
-    
+
     # The model admin to search from the navbar. Search bar will appear at the top right.
     "search_model": "auth.User",
-    
+
     # Field name on user model that contains avatar image
     "user_avatar": None,
-    
+
     #############
     # Top Menu #
     #############
-    
+
     # Links to put along the top menu
     "topmenu_links": [
         # Url that gets reversed (Permissions can be added)
-        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
-        
+        {"name": "Home",  "url": "admin:index",
+            "permissions": ["auth.view_user"]},
+
         # external url that opens in a new window (Permissions can be added)
         {"name": "NIRU Website", "url": "https://niru.ac.ke", "new_window": True},
-        
+
         # model admin url (Permissions checked against model)
         {"model": "auth.User"},
     ],
-    
+
     #############
     # User Menu #
     #############
-    
+
     # Additional links to include in the user menu on the top right ('app' url type requires django 3.2+)
     "usermenu_links": [
-        {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
+        {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues",
+            "new_window": True},
         {"model": "auth.user"}
     ],
-    
+
     #############
     # Side Menu #
     #############
-    
+
     # Whether to display the side menu
     "show_sidebar": True,
-    
+
     # Whether to aut expand the menu
     "navigation_expanded": True,
-    
+
     # Hide these apps when generating side menu e.g (auth)
     "hide_apps": [],
-    
+
     # Hide these models when generating side menu (e.g auth.user)
     "hide_models": [],
-    
+
     # List of apps (and/or models) to base side menu ordering off of (does not need to contain all apps/models)
     "order_with_respect_to": ["auth", "core"],
-    
+
     # Custom links to append to app groups, keyed on app name
-    "custom_links": {
-        "core": [{
-            "name": "Site Settings",
-            "url": "admin:core_sitesettings_changelist",
-            "icon": "fa fa-cog",
-            "permissions": ["core.view_sitesettings"]
-        }],
-    },
-    
+    "custom_links": {},
+
     # Custom icons for side menu apps/models See https://fontawesome.com/icons?d=gallery&m=free&v=5.0.0,5.0.1,5.0.10,5.0.11,5.0.12,5.0.13,5.0.2,5.0.3,5.0.4,5.0.5,5.0.6,5.0.7,5.0.8,5.0.9,6.0.0-beta1,6.0.0-beta2,6.0.0-beta3,6.0.0,6.0.1,6.0.2,6.0.3,6.0.4,6.0.5,6.0.6,6.0.7&f=classic,type,solid,regular,brands for full list of icons
     "icons": {
         "auth": "fas fa-users-cog",
@@ -262,34 +257,34 @@ JAZZMIN_SETTINGS = {
         "core.sitesettings": "fas fa-cog",
         "core.pagehero": "fas fa-image",
     },
-    
+
     # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",
     "default_icon_children": "fas fa-circle",
-    
+
     #################
     # Related Modal #
     #################
-    
+
     # Use modals instead of popups
     "related_modal_active": False,
-    
-    
+
+
     #############
     # UI Tweaks #
     #############
-    
+
     # Relative paths to custom CSS/JS scripts (must be present in static files)
     "custom_css": "css/admin-custom.css",
     "custom_js": "js/admin-custom.js",
-    
+
     # Whether to show the UI customizer on the sidebar
     "show_ui_builder": False,
-    
+
     ###############
     # Change view #
     ###############
-    
+
     # Render out the change view as a single form, or in tabs, current options are
     # - single
     # - horizontal_tabs (mimics the default Django surface)
@@ -297,13 +292,13 @@ JAZZMIN_SETTINGS = {
     # - collapsible
     # - carousel
     "changeform_format": "horizontal_tabs",
-    
+
     # override change forms on a per modeladmin basis
     "changeform_format_overrides": {
         "auth.user": "collapsible",
         "auth.group": "vertical_tabs",
     },
-    
+
     # Add a language dropdown into the admin
     "language_chooser": False,  # Set to False since we only use English
 }
