@@ -19,12 +19,9 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-# Import the custom admin site
-from core.admin_site import niru_admin
-
 urlpatterns = [
-    # Admin - using custom NIRU admin site
-    path('admin/', niru_admin.urls),
+    # Admin
+    path('admin/', admin.site.urls),
 
     # Django Summernote
     path('summernote/', include('django_summernote.urls')),

@@ -1,5 +1,12 @@
 from django.contrib import admin
+from django.contrib.admin import AdminSite
 from .models import SiteSettings, PageHero
+
+
+# Update the default admin site's attributes
+AdminSite.site_header = 'NIRU Administration'
+AdminSite.site_title = 'NIRU Admin Portal'
+AdminSite.index_title = 'Welcome to NIRU Admin Portal'
 
 
 @admin.register(SiteSettings)
@@ -37,7 +44,7 @@ class PageHeroAdmin(admin.ModelAdmin):
     list_editable = ('is_active', 'overlay_opacity')
     search_fields = ('title', 'subtitle', 'page_identifier')
     readonly_fields = ('created_at', 'updated_at')
-    
+
     fieldsets = (
         ('Page Identification', {
             'fields': ('page_identifier',)
@@ -56,7 +63,7 @@ class PageHeroAdmin(admin.ModelAdmin):
             'classes': ('collapse',)
         }),
     )
-    
+
     def get_queryset(self, request):
         qs = super().get_queryset(request)
         return qs.order_by('page_identifier')
