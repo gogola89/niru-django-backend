@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django_summernote',  # Rich text editor (replacing ckeditor)
     'imagekit',  # Image processing
     'drf_spectacular',  # API documentation
+    'taggit',  # For tagging functionality
 
     # Local apps
     'core',
@@ -34,6 +35,9 @@ INSTALLED_APPS = [
     'apps.academics',
     'apps.library',
     'apps.student_life',
+    'apps.news',
+    'apps.newsletter',
+    'apps.contact',
 ]
 
 MIDDLEWARE = [

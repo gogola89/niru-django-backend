@@ -10,4 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (adminHeader) {
         adminHeader.title = "NIRU Administration Panel";
     }
+    
+    // Add any additional custom behavior here
 });

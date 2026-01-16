@@ -40,10 +40,12 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 # Email backend for development (using Maildev)
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
+EMAIL_HOST = '127.0.0.1'  # Use 127.0.0.1 instead of localhost
+EMAIL_PORT = 1025  # Maildev default port
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = False
+DEFAULT_FROM_EMAIL = 'noreply@niru.ac.ke'
+SERVER_EMAIL = 'server@niru.ac.ke'
 
 # Static files (CSS, JavaScript, Images)
 # In development, static files are served by Django

@@ -37,7 +37,7 @@
     background-color: var(--niru-gold) !important;
 }
 
-/* Top navbar branding - with white text for visibility */
+/* Top navbar branding */
 .main-header.navbar {
     background-color: var(--niru-navy) !important;
 }
@@ -93,23 +93,6 @@ a:hover {
 .brand-link {
     font-weight: bold;
     letter-spacing: 0.5px;
-}
-
-/* Override default Django admin text */
-.brand-text {
-    font-size: 1.2rem !important;
-    font-weight: 600 !important;
-    color: var(--niru-gold) !important;
-}
-
-/* Ensure the site header text is properly displayed */
-.navbar-brand .brand-text {
-    color: var(--niru-gold) !important;
-}
-
-/* Additional override for admin header text */
-.navbar-nav .navbar-brand {
-    color: var(--white) !important;
 }
 
 /* Fix dashboard logo area text overflow */
@@ -169,16 +152,4 @@ a:hover {
     .brand-link .brand-text {
         max-width: calc(100% - 35px); /* Smaller allowance for logo */
     }
-}
-
-/* Specific override for the main header text */
-.main-header .navbar .brand-link .brand-text {
-    color: var(--niru-gold) !important;
-    font-weight: bold !important;
-}
-
-/* Override default Django admin header */
-.navbar-brand-text {
-    color: var(--niru-gold) !important;
-    font-weight: bold !important;
 }
