@@ -313,7 +313,7 @@ JAZZMIN_UI_TWEAKS = {
     "footer_small_text": False,
     "body_small_text": False,
     "brand_small_text": False,
-    "brand_colour": "navbar-primary",
+    "brand_colour": "#1a2a4e",  # Navy Blue as per branding guide
     "accent": "accent-primary",
     "navbar": "navbar-dark",
     "no_navbar_border": False,
