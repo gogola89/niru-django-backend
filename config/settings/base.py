@@ -95,7 +95,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 USE_I18N = True
 USE_TZ = True
 
@@ -305,7 +305,7 @@ JAZZMIN_SETTINGS = {
     },
     
     # Add a language dropdown into the admin
-    "language_chooser": True,
+    "language_chooser": False,  # Set to False since we only use English
 }
 
 JAZZMIN_UI_TWEAKS = {
